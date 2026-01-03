@@ -83,34 +83,6 @@ ou
 yarn preview
 ```
 
-## 📁 Estrutura do Projeto
-
-```
-portfolio/
-├── src/
-│   ├── components/          # Componentes reutilizáveis
-│   │   ├── Navigation.tsx   # Navegação principal
-│   │   ├── ProjectCard.tsx  # Card de projeto
-│   │   └── ...
-│   ├── sections/            # Seções da página
-│   │   ├── Home.tsx         # Seção inicial (Hero)
-│   │   ├── About.tsx        # Sobre mim
-│   │   ├── Projects.tsx     # Projetos
-│   │   ├── Skills.tsx        # Habilidades
-│   │   ├── Contact.tsx      # Contato
-│   │   ├── Footer.tsx       # Rodapé
-│   │   └── ...
-│   ├── App.tsx              # Componente principal
-│   ├── main.tsx             # Ponto de entrada
-│   └── index.css            # Estilos globais
-├── public/                  # Arquivos estáticos
-├── index.html               # HTML principal
-├── package.json             # Dependências do projeto
-├── vite.config.ts           # Configuração do Vite
-├── tsconfig.json            # Configuração do TypeScript
-└── README.md                # Este arquivo
-```
-
 ## 🎨 Características
 
 - ✅ Design minimalista e profissional
@@ -130,43 +102,7 @@ portfolio/
 4. **Skills** - Habilidades técnicas e ferramentas
 5. **Contato** - Informações de contato e redes sociais
 6. **Footer** - Rodapé com informações adicionais
-
-## 🚀 Deploy na Vercel
-
-### Opção 1: Deploy via CLI
-
-1. Instale a Vercel CLI:
-```bash
-npm i -g vercel
-```
-
-2. Faça login:
-```bash
-vercel login
-```
-
-3. Deploy:
-```bash
-vercel
-```
-
-### Opção 2: Deploy via GitHub
-
-1. Faça push do código para o GitHub
-2. Acesse [vercel.com](https://vercel.com)
-3. Conecte seu repositório GitHub
-4. Configure o projeto:
-   - **Framework Preset**: Vite
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-5. Clique em Deploy
-
-## 📝 Scripts Disponíveis
-
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Cria a build de produção
-- `npm run preview` - Preview da build de produção
-
+   
 ## 👤 Autor
 
 **João Murilo Pereira de Oliveira**
@@ -174,8 +110,3 @@ vercel
 - Email: j.murilo.mobile@gmail.com
 - LinkedIn: [joaomurilopoo](https://www.linkedin.com/in/joaomurilopoo/)
 - GitHub: [JoaoMuriloPO](https://github.com/JoaoMuriloPO)
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
