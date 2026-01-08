@@ -18,7 +18,7 @@
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--spacing-md);
   background: var(--bg-card);
   backdrop-filter: blur(10px);
@@ -29,6 +29,18 @@
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
+
+.email-button{
+  background: none;
+  border: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+.email-button:hover{
+  color: var(--accent)
+}
+
 }
 
 .contact-item::before {
@@ -153,6 +165,7 @@
 .social-link:hover svg {
   transform: scale(1.2);
 }
+
 
 @media (max-width: 768px) {
   .contact-content {

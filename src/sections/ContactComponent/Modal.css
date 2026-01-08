@@ -1,0 +1,144 @@
+/* Overlay escuro com blur */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Caixa do modal */
+.modal {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  animation: slideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botão fechar */
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+/* Título */
+.modal h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Subtítulo */
+.modal p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Formulário */
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Inputs */
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+}
+
+/* Botão enviar */
+.modal button[type='submit'] {
+  margin-top: var(--spacing-sm);
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal button[type='submit']:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.modal button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .modal {
+    margin: 0 16px;
+    padding: var(--spacing-md);
+  }
+}
