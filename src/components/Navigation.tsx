@@ -14,8 +14,9 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     { id: 'about', label: 'Sobre' },
     { id: 'projects', label: 'Projetos' },
     { id: 'skills', label: 'Skills' },
+    { id: 'Certificates', label: 'Certificates' },
     { id: 'contact', label: 'Contato' },
-  ]
+  ];
 
   const handleNavClick = (sectionId: string) => {
     const element = document.getElementById(sectionId)
