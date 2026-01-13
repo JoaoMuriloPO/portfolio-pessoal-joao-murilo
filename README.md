@@ -1,3 +1,5 @@
+<img width="1719" height="903" alt="image" src="https://github.com/user-attachments/assets/c8a679a1-b9a1-441b-8900-4aa0f94c387c" />
+
 # Portfólio Pessoal - João Murilo
 
 Portfólio pessoal desenvolvido com ReactJS, TypeScript e Vite, apresentando projetos, habilidades e informações profissionais de forma moderna e profissional.
@@ -110,3 +112,4 @@ yarn preview
 - Email: j.murilo.mobile@gmail.com
 - LinkedIn: [joaomurilopoo](https://www.linkedin.com/in/joaomurilopoo/)
 - GitHub: [JoaoMuriloPO](https://github.com/JoaoMuriloPO)
+
