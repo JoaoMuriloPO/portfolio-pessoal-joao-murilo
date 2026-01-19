@@ -1,50 +1,168 @@
 .Certificates {
   background-color: var(--bg-primary);
+  padding: 80px 0; /* Removido o padding lateral para o container cuidar disso */
 }
 
-.certificates-grid {
+/* Título igual ao da inspiração */
+.Certificates .section-title {
+  font-size: clamp(2.5rem, 6vw, 5rem); /* Grande como na print */
+  text-align: left; /* Alinhado à esquerda como na print */
+  margin-bottom: 0.5rem;
+  background: none;
+  -webkit-text-fill-color: var(--text-primary);
+}
+
+.education-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Gap bem pequeno igual ao exemplo */
+  margin-top: 3rem;
+  align-items: start;
 }
 
+.education-item {
+  background-color: #0a0a0a; /* Fundo bem escuro */
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 15px; /* Mais compacto */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Espaço interno entre textos menor */
+  transition: 0.3s ease;
+  cursor: pointer;
+  min-height: 140px; /* Garante que todos tenham o mesmo tamanho */
+}
+
+.education-item:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+  z-index: 10;
+}
+.education-item:last-child{
+  background-color: #0a0a0a;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    min-height: 140px;
+}
+
+.education-item.highlight {
+  grid-column: span 2;
+  border-color: #4a2cc5; /* Cor roxa da inspiração ou var(--accent) */
+}
+
+/* Ajuste das fontes internas para caber tudo */
+.category-label {
+  font-size: 0.75rem;
+  color: #cccccc;
+  margin: 0;
+}
+
+.education-name {
+  font-size: 1rem; /* Diminuído para não quebrar linha excessiva */
+  line-height: 1.2; /* Texto mais junto */
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.education-name strong {
+  font-weight: 600;
+}
+
+.education-institution {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.time {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
+/* Seção de Skills idêntica à print */
+.skills-wrapper {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.skills-container {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.skill-category-title {
+  font-size: 1.2rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-category-title::before {
+  content: "";
+  width: 4px;
+  height: 18px;
+  background: var(--accent-gradient);
+  margin-right: 15px;
+  border-radius: 2px;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Divide em 3 colunas como na print */
+  gap: 20px;
+}
+
+.skill-column p {
+  font-size: 1.1rem;
+  line-height: 2; /* Espaçamento vertical entre as skills */
+  color: var(--text-primary);
+  margin: 0;
+  transition: 0.2s ease;
+}
+
+.skill-column p:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* Ajuste para telas menores */
 @media (max-width: 768px) {
-  .certificates-grid {
-    grid-template-columns: 1fr;
+  .skill-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colunas no tablet */
   }
 }
 
-.certificates-navigation {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+@media (max-width: 480px) {
+  .skill-grid {
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+  }
+}
+/* Responsividade */
+@media (max-width: 1080px) {
+  .education-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-.certificates-navigation button {
-  background: transparent;
-  border: 1px solid var(--text-secondary);
-  color: var(--text-primary);
-  font-size: 1.5rem;
-  padding: 0.4rem 0.9rem;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+@media (max-width: 800px) {
+  .education-grid { grid-template-columns: repeat(2, 1fr); }
+  .skill-list { grid-template-columns: repeat(2, 1fr); }
 }
 
-.certificates-navigation button:hover:not(:disabled) {
-  background: var(--accent-color);
-  color: #fff;
-}
-
-.certificates-navigation button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.certificates-navigation span {
-  font-size: 0.9rem;
-  opacity: 0.8;
+@media (max-width: 500px) {
+  .education-grid { grid-template-columns: 1fr; }
+  .education-item.highlight { grid-column: span 1; }
+  .skill-list { grid-template-columns: 1fr; }
 }
