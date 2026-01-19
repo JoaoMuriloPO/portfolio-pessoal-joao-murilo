@@ -14,12 +14,14 @@ const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="contact" className="contact section">
+    <footer id="contact" className="footer-section"> 
       <div className="container">
-        <h2 className="section-title">Contato</h2>
-        <p className="section-subtitle">
-          Entre em contato comigo através dos canais abaixo
-        </p>
+        <div className="footer-top">
+          <h2 className="section-title">Vamos conversar ?</h2>
+          <p className="section-subtitle">
+            Estou disponível para novos projetos e oportunidades.
+          </p>
+        </div>
 
         <div className="contact-content">
           <div className="contact-info">
@@ -60,44 +62,24 @@ const Contact = () => {
           </div>
 
           <div className="contact-social">
-            <h3>Redes Sociais</h3>
+            <h3>Conecte-se comigo</h3>
             <div className="social-links">
-              <a
-                href="https://www.linkedin.com/in/joaomurilopoo/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin />
-                <span>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/joaomurilopoo/" target="_blank" rel="noopener noreferrer" className="social-link">
+                <FaLinkedin /> <span>LinkedIn</span>
               </a>
-              <a
-                href="https://github.com/JoaoMuriloPO"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="GitHub"
-              >
-                <FaGithub />
-                <span>GitHub</span>
+              <a href="https://github.com/JoaoMuriloPO" target="_blank" rel="noopener noreferrer" className="social-link">
+                <FaGithub /> <span>GitHub</span>
               </a>
-              <a
-                href="https://wa.me/5521985405690?text=Olá%20João%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp />
-                <span>WhatsApp</span>
+              <a href="https://wa.me/5521985405690" target="_blank" rel="noopener noreferrer" className="social-link">
+                <FaWhatsapp /> <span>WhatsApp</span>
               </a>
             </div>
           </div>
         </div>
       </div>
+      
       {isModalOpen && <EmailModal onClose={() => setIsModalOpen(false)} /> }
-    </section>
+    </footer>
   );
 };
 
