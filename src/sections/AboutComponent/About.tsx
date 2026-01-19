@@ -27,10 +27,6 @@ const About = () => {
                 <span>Rio de Janeiro – RJ</span>
               </div>
               <div className="info-item">
-                <FaPhone className="info-icon" />
-                <a href="tel:+5521985405690">(21) 98540-5690</a>
-              </div>
-              <div className="info-item">
                 <FaEnvelope className="info-icon" />
                 <a href="mailto:j.murilo.mobile@gmail.com">
                   j.murilo.mobile@gmail.com
@@ -55,16 +51,6 @@ const About = () => {
                 >
                   GitHub
                 </a>
-              </div>
-              <div className="experience-item-bottom">
-                <h3>Formação</h3>
-                <div className="education-item">
-                  <h4>Tecnólogo em Redes de Computadores</h4>
-                  <p className="institution">
-                    Instituto Federal do Rio de Janeiro (IFRJ)
-                  </p>
-                  <p className="period">out/2024 – out/2027</p>
-                </div>
               </div>
             </div>
 
